@@ -5,7 +5,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/pelletier/go-toml"
+	"github.com/pelletier/go-toml/v2"
 )
 
 //go:embed languages.toml
