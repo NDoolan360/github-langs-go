@@ -232,6 +232,15 @@ codemirror_mode = "clike"
 codemirror_mime_type = "text/x-c++src"
 language_id = 389_477_596
 
+["Answer Set Programming"]
+type = "programming"
+color = "#A9CC29"
+extensions = [ ".lp" ]
+interpreters = [ "clingo" ]
+tm_scope = "source.answersetprogramming"
+ace_mode = "prolog"
+language_id = 433_009_171
+
 ["Ant Build System"]
 type = "data"
 color = "#A9157E"
@@ -256,14 +265,14 @@ color = "#d12127"
 aliases = [ "aconf", "apache" ]
 extensions = [ ".apacheconf", ".vhost" ]
 filenames = [ ".htaccess", "apache2.conf", "httpd.conf" ]
-tm_scope = "source.apache-config"
+tm_scope = "source.apacheconf"
 ace_mode = "apache_conf"
 language_id = 16
 
 [Apex]
 type = "programming"
 color = "#1797c0"
-extensions = [ ".cls", ".trigger" ]
+extensions = [ ".cls", ".apex", ".trigger" ]
 tm_scope = "source.apex"
 ace_mode = "java"
 codemirror_mode = "clike"
@@ -318,7 +327,7 @@ language_id = 23
 type = "programming"
 color = "#6E4C13"
 aliases = [ "asm", "nasm" ]
-extensions = [ ".asm", ".a51", ".i", ".inc", ".nas", ".nasm" ]
+extensions = [ ".asm", ".a51", ".i", ".inc", ".nas", ".nasm", ".s" ]
 tm_scope = "source.assembly"
 ace_mode = "assembly_x86"
 language_id = 24
@@ -468,6 +477,13 @@ codemirror_mode = "stex"
 codemirror_mime_type = "text/x-stex"
 language_id = 982_188_347
 
+["BibTeX Style"]
+type = "programming"
+extensions = [ ".bst" ]
+tm_scope = "source.bst"
+ace_mode = "text"
+language_id = 909_569_041
+
 [Bicep]
 type = "programming"
 color = "#519aba"
@@ -606,7 +622,7 @@ language_id = 153_503_348
 [C]
 type = "programming"
 color = "#555555"
-extensions = [ ".c", ".cats", ".h", ".idc" ]
+extensions = [ ".c", ".cats", ".h", ".h.in", ".idc" ]
 interpreters = [ "tcc" ]
 tm_scope = "source.c"
 ace_mode = "c_cpp"
@@ -752,7 +768,7 @@ tm_scope = "source.css"
 ace_mode = "css"
 codemirror_mode = "css"
 codemirror_mime_type = "text/css"
-color = "#563d7c"
+color = "#663399"
 extensions = [ ".css" ]
 language_id = 50
 
@@ -1411,7 +1427,7 @@ type = "programming"
 aliases = [ "Containerfile" ]
 color = "#384d54"
 tm_scope = "source.dockerfile"
-extensions = [ ".dockerfile" ]
+extensions = [ ".dockerfile", ".containerfile" ]
 filenames = [ "Containerfile", "Dockerfile" ]
 ace_mode = "dockerfile"
 codemirror_mode = "dockerfile"
@@ -1892,7 +1908,7 @@ codemirror_mode = "fortran"
 codemirror_mime_type = "text/x-fortran"
 language_id = 761_352_333
 
-[FreeBasic]
+[FreeBASIC]
 type = "programming"
 color = "#141AC9"
 extensions = [ ".bi", ".bas" ]
@@ -2481,7 +2497,7 @@ color = "#6e4a7e"
 tm_scope = "text.html.elixir"
 group = "HTML"
 aliases = [ "eex", "heex", "leex" ]
-extensions = [ ".eex", ".html.heex", ".html.leex" ]
+extensions = [ ".html.eex", ".heex", ".leex" ]
 ace_mode = "text"
 codemirror_mode = "htmlmixed"
 codemirror_mime_type = "text/html"
@@ -2576,6 +2592,14 @@ extensions = [ ".hb" ]
 tm_scope = "source.harbour"
 ace_mode = "text"
 language_id = 156
+
+[Hare]
+type = "programming"
+color = "#9d7424"
+extensions = [ ".ha" ]
+ace_mode = "text"
+language_id = 463_518_941
+tm_scope = "none"
 
 [Haskell]
 type = "programming"
@@ -2676,6 +2700,7 @@ extensions = [
   ".url"
 ]
 filenames = [
+  ".buckconfig",
   ".coveragerc",
   ".flake8",
   ".pylintrc",
@@ -2702,6 +2727,16 @@ codemirror_mode = "mirc"
 codemirror_mime_type = "text/mirc"
 language_id = 164
 
+[ISPC]
+type = "programming"
+color = "#2D68B1"
+extensions = [ ".ispc" ]
+tm_scope = "source.ispc"
+ace_mode = "c_cpp"
+codemirror_mode = "clike"
+codemirror_mime_type = "text/x-csrc"
+language_id = 327_071
+
 [Idris]
 type = "programming"
 color = "#b30000"
@@ -2722,9 +2757,11 @@ filenames = [
   ".coffeelintignore",
   ".cvsignore",
   ".dockerignore",
+  ".easignore",
   ".eleventyignore",
   ".eslintignore",
   ".gitignore",
+  ".ignore",
   ".markdownlintignore",
   ".nodemonignore",
   ".npmignore",
@@ -2870,9 +2907,11 @@ extensions = [
   ".har",
   ".ice",
   ".JSON-tmLanguage",
+  ".json.example",
   ".jsonl",
   ".mcmeta",
   ".sarif",
+  ".tact",
   ".tfstate",
   ".tfstate.backup",
   ".topojson",
@@ -2893,7 +2932,9 @@ filenames = [
   ".tern-project",
   ".watchmanconfig",
   "MODULE.bazel.lock",
+  "Package.resolved",
   "Pipfile.lock",
+  "bun.lock",
   "composer.lock",
   "deno.lock",
   "flake.lock",
@@ -2905,7 +2946,7 @@ language_id = 174
 type = "data"
 color = "#292929"
 group = "JSON"
-tm_scope = "source.js"
+tm_scope = "source.json.comments"
 ace_mode = "javascript"
 codemirror_mode = "javascript"
 codemirror_mime_type = "text/javascript"
@@ -2975,6 +3016,14 @@ codemirror_mime_type = "application/json"
 extensions = [ ".jq" ]
 tm_scope = "source.jsoniq"
 language_id = 177
+
+[Jai]
+type = "programming"
+color = "#ab8b4b"
+ace_mode = "text"
+tm_scope = "source.jai"
+extensions = [ ".jai" ]
+language_id = 70_127_133
 
 [Janet]
 type = "programming"
@@ -3212,6 +3261,16 @@ filenames = [
 extensions = [ ".just" ]
 ace_mode = "text"
 language_id = 128_447_695
+
+[KDL]
+type = "data"
+color = "#ffb3b3"
+extensions = [ ".kdl" ]
+tm_scope = "source.kdl"
+ace_mode = "tcl"
+codemirror_mode = "yacas"
+codemirror_mime_type = "text/x-yacas"
+language_id = 931_123_626
 
 [KRL]
 type = "programming"
@@ -3457,11 +3516,18 @@ tm_scope = "none"
 ace_mode = "text"
 language_id = 201
 
+["Linear Programming"]
+type = "programming"
+extensions = [ ".lp" ]
+tm_scope = "none"
+ace_mode = "text"
+language_id = 377_204_539
+
 ["Linker Script"]
-type = "data"
+type = "programming"
 extensions = [ ".ld", ".lds", ".x" ]
 filenames = [ "ld.script" ]
-tm_scope = "none"
+tm_scope = "source.c.linker"
 ace_mode = "text"
 language_id = 202
 
@@ -3895,6 +3961,21 @@ codemirror_mode = "yaml"
 codemirror_mime_type = "text/x-yaml"
 language_id = 4_896_465
 
+[MiniZinc]
+type = "programming"
+color = "#06a9e6"
+extensions = [ ".mzn" ]
+tm_scope = "source.mzn"
+ace_mode = "text"
+language_id = 238_874_535
+
+["MiniZinc Data"]
+type = "data"
+extensions = [ ".dzn" ]
+tm_scope = "source.mzn"
+ace_mode = "text"
+language_id = 938_193_433
+
 [Mint]
 type = "programming"
 extensions = [ ".mint" ]
@@ -3980,6 +4061,14 @@ extensions = [ ".moo" ]
 tm_scope = "none"
 ace_mode = "text"
 language_id = 237
+
+[MoonBit]
+type = "programming"
+color = "#b92381"
+extensions = [ ".mbt" ]
+tm_scope = "source.moonbit"
+ace_mode = "text"
+language_id = 181_453_007
 
 [MoonScript]
 type = "programming"
@@ -4336,6 +4425,24 @@ interpreters = [ "ocaml", "ocamlrun", "ocamlscript" ]
 tm_scope = "source.ocaml"
 language_id = 255
 
+["OMNeT++ MSG"]
+type = "programming"
+extensions = [ ".msg" ]
+color = "#a0e0a0"
+tm_scope = "source.msg"
+ace_mode = "text"
+aliases = [ "omnetpp-msg" ]
+language_id = 664_100_008
+
+["OMNeT++ NED"]
+type = "programming"
+extensions = [ ".ned" ]
+color = "#08607c"
+tm_scope = "source.ned"
+ace_mode = "text"
+aliases = [ "omnetpp-ned" ]
+language_id = 924_868_392
+
 [Oberon]
 type = "programming"
 extensions = [ ".ob2" ]
@@ -4533,6 +4640,15 @@ extensions = [ ".org" ]
 tm_scope = "none"
 ace_mode = "text"
 language_id = 267
+
+[OverpassQL]
+type = "programming"
+color = "#cce2aa"
+wrap = true
+extensions = [ ".overpassql" ]
+tm_scope = "source.overpassql"
+ace_mode = "text"
+language_id = 689_079_655
 
 [Ox]
 type = "programming"
@@ -5162,6 +5278,23 @@ ace_mode = "text"
 tm_scope = "source.quake"
 language_id = 375_265_331
 
+[QuickBASIC]
+type = "programming"
+color = "#008080"
+extensions = [ ".bas" ]
+tm_scope = "source.QB64"
+aliases = [
+  "qb",
+  "qbasic",
+  "qb64",
+  "classic qbasic",
+  "classic quickbasic"
+]
+ace_mode = "text"
+codemirror_mode = "vb"
+codemirror_mime_type = "text/x-vb"
+language_id = 593_107_205
+
 [R]
 type = "programming"
 color = "#198CE7"
@@ -5789,6 +5922,7 @@ language_id = 335
 ["SSH Config"]
 type = "data"
 group = "INI"
+aliases = [ "sshconfig", "sshdconfig", "ssh_config", "sshd_config" ]
 filenames = [
   "ssh-config",
   "ssh_config",
@@ -6077,6 +6211,14 @@ filenames = [ "Singularity" ]
 ace_mode = "text"
 language_id = 987_024_632
 
+[Slang]
+type = "programming"
+color = "#1fbec9"
+extensions = [ ".slang" ]
+tm_scope = "source.slang"
+ace_mode = "text"
+language_id = 239_357_863
+
 [Slash]
 type = "programming"
 color = "#007eff"
@@ -6246,7 +6388,8 @@ filenames = [
   "MODULE.bazel",
   "Tiltfile",
   "WORKSPACE",
-  "WORKSPACE.bazel"
+  "WORKSPACE.bazel",
+  "WORKSPACE.bzlmod"
 ]
 aliases = [ "bazel", "bzl" ]
 language_id = 960_266_174
@@ -6301,6 +6444,14 @@ interpreters = [ "sclang", "scsynth" ]
 tm_scope = "source.supercollider"
 ace_mode = "text"
 language_id = 361
+
+["Survex data"]
+type = "data"
+color = "#ffcc99"
+tm_scope = "none"
+ace_mode = "text"
+extensions = [ ".svx" ]
+language_id = 24_470_517
 
 [Svelte]
 type = "markup"
@@ -6393,6 +6544,14 @@ codemirror_mode = "toml"
 codemirror_mime_type = "text/x-toml"
 language_id = 365
 
+["TSPLIB data"]
+aliases = [ "travelling salesman problem", "traveling salesman problem" ]
+type = "data"
+extensions = [ ".tsp" ]
+tm_scope = "none"
+ace_mode = "text"
+language_id = 89_289_301
+
 [TSQL]
 type = "programming"
 color = "#e38c00"
@@ -6428,6 +6587,14 @@ extensions = [ ".txl" ]
 tm_scope = "source.txl"
 ace_mode = "text"
 language_id = 366
+
+[Tact]
+type = "programming"
+color = "#48b5ff"
+extensions = [ ".tact" ]
+ace_mode = "text"
+tm_scope = "source.tact"
+language_id = 606_708_469
 
 [Talon]
 type = "programming"
@@ -6608,6 +6775,15 @@ tm_scope = "source.toit"
 ace_mode = "text"
 language_id = 356_554_395
 
+["Tree-sitter Query"]
+type = "programming"
+color = "#8ea64c"
+aliases = [ "tsq" ]
+extensions = [ ".scm" ]
+tm_scope = "source.scm"
+ace_mode = "text"
+language_id = 436_081_647
+
 [Turing]
 type = "programming"
 color = "#cf142b"
@@ -6647,13 +6823,22 @@ language_id = 632_765_617
 type = "programming"
 color = "#3178c6"
 aliases = [ "ts" ]
-interpreters = [ "deno", "ts-node", "tsx" ]
+interpreters = [ "bun", "deno", "ts-node", "tsx" ]
 extensions = [ ".ts", ".cts", ".mts" ]
 tm_scope = "source.ts"
 ace_mode = "typescript"
 codemirror_mode = "javascript"
 codemirror_mime_type = "application/typescript"
 language_id = 378
+
+[TypeSpec]
+type = "programming"
+color = "#4A3665"
+aliases = [ "tsp" ]
+extensions = [ ".tsp" ]
+tm_scope = "source.tsp"
+ace_mode = "text"
+language_id = 952_272_597
 
 [Typst]
 type = "programming"
@@ -6907,7 +7092,7 @@ language_id = 390
 type = "markup"
 color = "#41b883"
 extensions = [ ".vue" ]
-tm_scope = "text.html.vue"
+tm_scope = "source.vue"
 ace_mode = "html"
 language_id = 391
 
@@ -7169,6 +7354,7 @@ extensions = [
   ".glade",
   ".gml",
   ".gmx",
+  ".gpx",
   ".grxml",
   ".gst",
   ".hzp",
@@ -7329,6 +7515,14 @@ codemirror_mime_type = "text/xml"
 color = "#EB8CEB"
 language_id = 404
 
+[Xmake]
+type = "programming"
+color = "#22a079"
+filenames = [ "xmake.lua" ]
+tm_scope = "source.xmake"
+ace_mode = "text"
+language_id = 225_223_071
+
 [Xojo]
 type = "programming"
 color = "#81bd41"
@@ -7382,9 +7576,11 @@ extensions = [
 filenames = [
   ".clang-format",
   ".clang-tidy",
+  ".clangd",
   ".gemrc",
   "CITATION.cff",
   "glide.lock",
+  "pixi.lock",
   "yarn.lock"
 ]
 ace_mode = "yaml"
@@ -7606,6 +7802,17 @@ extensions = [ ".mcfunction" ]
 tm_scope = "source.mcfunction"
 ace_mode = "text"
 language_id = 462_488_745
+
+[mdsvex]
+type = "markup"
+color = "#5f9ea0"
+tm_scope = "none"
+ace_mode = "markdown"
+codemirror_mode = "gfm"
+codemirror_mime_type = "text/x-gfm"
+wrap = true
+extensions = [ ".svx" ]
+language_id = 566_198_445
 
 [mupad]
 type = "programming"
